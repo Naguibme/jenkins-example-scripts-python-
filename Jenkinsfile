@@ -2,22 +2,22 @@ pipeline {
     agent any // Utilise n'importe quel agent disponible
 
     stages {
-        stage('Préparation') { // Étape pour préparer l'environnement
+        stage('Préparation') { // Étape initiale
             steps {
-                echo 'Préparation de l’environnement sur Windows'
+                echo 'Préparation pour exécuter le fichier batch.'
             }
         }
 
-        stage('Exécution du script Python') { // Étape pour exécuter le script
+        stage('Exécution du fichier batch') { // Étape principale
             steps {
-                bat 'python hello.py' // Commande Windows pour exécuter le script Python
+                bat 'hello.bat' // Exécute le fichier batch "hello.bat"
             }
         }
     }
 
     post {
         always {
-            echo 'Pipeline terminé sur Windows.'
+            echo 'Pipeline terminé.'
         }
     }
 }
