@@ -10,7 +10,7 @@ pipeline {
 
         stage('Exécution du fichier batch') { // Étape principale
             steps {
-                bat 'hello.bat' // Exécute le fichier batch "hello.bat"
+                bat 'python hello.py' // Exécute le fichier python
             }
         }
     }
