@@ -10,7 +10,8 @@ pipeline {
 
         stage('Exécution du fichier batch') { // Étape principale
             steps {
-                bat 'python hello.py' // Exécute le fichier python
+           
+              bat 'C:\\Users\\nagui\\AppData\\Local\\Programs\\Python\\Python313\\python.exe hello.py'  
             }
         }
     }
