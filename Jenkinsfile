@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Préparation') { // Étape initiale
             steps {
-                echo 'Préparation pour exécuter le fichier batch.'
+                echo 'Préparation pour exécuter Le script Python.'
             }
         }
 
-        stage('Exécution du fichier batch') { // Étape principale
+        stage('Exécution du script Python') { // Étape principale
             steps {
            
-              bat 'C:\\Users\\nagui\\AppData\\Local\\Programs\\Python\\Python313\\python.exe hello.py'  
+              bat 'C:\\Users\\nagui\\AppData\\Local\\Programs\\Python\\Python313\\python.exe hello.py' // avec le chemin de Python 
             }
         }
     }
